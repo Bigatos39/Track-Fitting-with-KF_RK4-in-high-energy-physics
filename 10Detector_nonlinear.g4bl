@@ -1,0 +1,49 @@
+physics QGSP_BIC_EMY
+beam gaussian particle=e- \
+    beamZ=0 \
+    meanMomentum=1000 \
+    sigmaX=0.0 sigmaY=0.00 \
+    sigmaXp=0.01 sigmaYp=0.01 \
+    nEvents=1000000
+
+# ======================
+# DETECTOR TRƯỚC B
+# ======================
+virtualdetector DetIn \
+    radius=150 \
+    length=50 \
+    material=Xe \
+    format=ascii \
+    filename=tracking.txt
+
+place DetIn rename=DetIn1 z=200
+place DetIn rename=DetIn2 z=500
+place DetIn rename=DetIn3 z=800
+place DetIn rename=DetIn4 z=1100
+place DetIn rename=DetIn5 z=1400
+
+genericbend dipole \
+    fieldWidth=800 \
+    fieldHeight=400 \
+    fieldLength=400 \
+    By=6.54 \
+    fieldColor=0,0,1
+place dipole z=1900 x=30 rotation=Y30
+
+# ======================
+# DETECTOR SAU B
+# ======================
+# theta = 45 deg sau dipole
+
+virtualdetector DetOut \
+    radius=250 \
+    length=50 \
+    material=Xe \
+    format=ascii \
+    filename=tracking.txt
+
+place DetOut rename=DetOut1 z=2283 x=483  rotation=Y45
+place DetOut rename=DetOut2 z=2566 x=786  rotation=Y45
+place DetOut rename=DetOut3 z=2849 x=1079  rotation=Y45
+place DetOut rename=DetOut4 z=3132 x=1392 rotation=Y45
+place DetOut rename=DetOut5 z=3415 x=1695 rotation=Y45
