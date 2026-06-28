@@ -125,16 +125,12 @@ p [GeV/c] = 0.3 * B [T] * L_mag [m] / |delta_tx|
 ```
 .
 ├── simulation/
-│   ├── 10Detector_nonlinear_vacuum.g4bl   # G4BL simulation — vacuum
 │   ├── 10Detector_nonlinear_xe.g4bl       # G4BL simulation — Xenon
 │   └── convert_to_root.C                  # Convert ASCII → ROOT TTree
 ├── src/
 │   ├── kf_rk4.C                           # Main KF + RK4 macro (ROOT)
-│   └── multiple_scattering.C              # Fit scattering angle distribution
 └── results/
-    ├── pull_chi2_pval.pdf                  # Tracking validation plots
-    ├── momentum.pdf                        # Momentum reconstruction
-    └── multipleScattering_fitting.pdf      # 4-Gaussian fit of theta distribution
+    ├── Total_KF_4D_Xe.pdf                 # Total Chi2, P-value, pull function
 ```
 
 ---
