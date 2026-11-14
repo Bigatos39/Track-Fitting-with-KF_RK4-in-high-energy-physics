@@ -1,4 +1,4 @@
-# Track Fitting with Kalman Filter + Runge-Kutta 4 in High Energy Physics
+# Track Fitting with Kalman Filter + Runge-Kutta 4 in High Energy Physics (With process noise is following by just one Gaussian fuction)
 
 A nonlinear charged particle track fitting framework combining **Kalman Filter (KF)** and **4th-order Runge-Kutta (RK4)** propagation for a 10-detector spectrometer system with magnetic deflection.
 
